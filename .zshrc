@@ -175,9 +175,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Remove dupes on arrow up
 setopt HIST_FIND_NO_DUPS
 
-# For autojump
-#. /usr/share/autojump/autojump.sh
-
 # Paths for pj plugin
 PROJECT_PATHS=(~/Projects)
 

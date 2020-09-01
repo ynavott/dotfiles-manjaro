@@ -174,8 +174,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Remove dupes on arrow up
 setopt HIST_FIND_NO_DUPS
 
-# Paths for pj plugin
-PROJECT_PATHS=(~/Projects)
+# Path for npm
+PATH="$HOME/.node_modules/bin:$PATH"
+export npm_config_prefix=~/.node_modules
 
 # man page colors
 export LESS_TERMCAP_mb=$'\e[1;32m'

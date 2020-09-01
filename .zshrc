@@ -166,7 +166,7 @@ source $ZSH/oh-my-zsh.sh
 
 # pipx completion
 autoload -U +X bashcompinit && bashcompinit
-#eval "$(register-python-argcomplete pipx)"
+eval "$(register-python-argcomplete pipx)"
 
 # Path to cargo
 export PATH="$HOME/.cargo/bin:$PATH"

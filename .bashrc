@@ -142,3 +142,5 @@ ex ()
 #cargo path
 export PATH="$HOME/.cargo/bin:$PATH"
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

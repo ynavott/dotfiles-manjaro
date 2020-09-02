@@ -133,7 +133,7 @@ source $ZSH/oh-my-zsh.sh
   alias la='ls -A'
   alias lla='ls -lA'
   alias l='ls -F'
-  
+
   # top to ytop
   alias top='ytop --per-cpu'
 
@@ -143,15 +143,21 @@ source $ZSH/oh-my-zsh.sh
   # cat to bat
   alias bat='bat --theme=ansi-$([ "$COLOR_SCHEME" = "light" ] && echo "light" || echo "dark")'
   alias cat='bat --pager=never'
-  
+
   # cowsay alias
   alias cs='cowsay'
+
+  # nnn alias
+  alias n='nnn -e -H -n'
+
+  # nvim alias
+  alias v='nvim'
 
 # pyenv stuff
 	# pyenv paths
 	export PYENV_ROOT="$HOME/.pyenv"
 	export PATH="$PYENV_ROOT/bin:$PATH"
-	
+
 	# pyenv init and pyenv virtualenv init
 	if command -v pyenv 1>/dev/null 2>&1; then
 	  eval "$(pyenv init -)"
@@ -160,7 +166,7 @@ source $ZSH/oh-my-zsh.sh
 # pipenv stuff
 	# create venv in proj directory
 	export PIPENV_VENV_IN_PROJECT=1
-	
+
 	# make pipenv use the pyenv python ver
 	export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
 

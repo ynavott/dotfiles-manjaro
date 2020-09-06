@@ -153,6 +153,9 @@ source $ZSH/oh-my-zsh.sh
   # nvim alias
   alias v='nvim'
 
+  #tlmgr alias
+  alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
+
 # pyenv stuff
 	# pyenv paths
 	export PYENV_ROOT="$HOME/.pyenv"
@@ -183,6 +186,9 @@ setopt HIST_FIND_NO_DUPS
 # Path for npm
 PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix=~/.node_modules
+
+# TEXMFDIST definition
+#export TEXMFDIST="/usr/share/texmf-dist"
 
 # man page colors
 export LESS_TERMCAP_mb=$'\e[1;32m'

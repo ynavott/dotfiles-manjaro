@@ -1,7 +1,4 @@
 # Settings
-# Window size
-set window-height 1030
-set window-width 960
 # Font
 set font MesloLGS NF 10
 # Show scrollbars

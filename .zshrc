@@ -157,35 +157,17 @@ source $ZSH/oh-my-zsh.sh
   alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 
 # pyenv stuff
-	# pyenv paths
-	export PYENV_ROOT="$HOME/.pyenv"
-	export PATH="$PYENV_ROOT/bin:$PATH"
-
 	# pyenv init and pyenv virtualenv init
 	if command -v pyenv 1>/dev/null 2>&1; then
 	  eval "$(pyenv init -)"
 	fi
 
-# pipenv stuff
-	# create venv in proj directory
-	export PIPENV_VENV_IN_PROJECT=1
-
-	# make pipenv use the pyenv python ver
-	export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
-
 # pipx completion
 autoload -U +X bashcompinit && bashcompinit
 eval "$(register-python-argcomplete pipx)"
 
-# Path to cargo
-export PATH="$HOME/.cargo/bin:$PATH"
-
 # Remove dupes on arrow up
 setopt HIST_FIND_NO_DUPS
-
-# Path for npm
-PATH="$HOME/.node_modules/bin:$PATH"
-export npm_config_prefix=~/.node_modules
 
 # TEXMFDIST definition
 #export TEXMFDIST="/usr/share/texmf-dist"

@@ -4,7 +4,7 @@ export READER="zathura"
 export VISUAL="nvim"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
-export VIDEO="vlc"
+export VIDEO="mpv"
 export IMAGE="sxiv"
 
 # pyenv stuff

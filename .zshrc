@@ -124,6 +124,7 @@ source $ZSH/oh-my-zsh.sh
   alias diff='diff --color=auto'
   alias ip='ip --color=auto'
   alias pacman='pacman --color=auto'
+  alias yay='yay --color=auto'
 
   # ls
   alias ls='ls --color=auto'
@@ -135,20 +136,21 @@ source $ZSH/oh-my-zsh.sh
   alias l='ls -F'
 
   # top to ytop
-  alias top='ytop --per-cpu'
+  alias top='bpytop'
 
   # Show public IP
   alias myip='curl http://ipecho.net/plain; echo'
 
-  # cat to bat
+  # cat & less to bat
   alias bat='bat --theme=ansi-$([ "$COLOR_SCHEME" = "light" ] && echo "light" || echo "dark")'
   alias cat='bat --pager=never'
+  alias less='bat'
 
   # cowsay alias
   alias cs='cowsay'
 
   # nnn alias
-  alias n='nnn -e -H -n'
+  alias n='nnn -e -H'
 
   # nvim alias
   alias v='nvim'

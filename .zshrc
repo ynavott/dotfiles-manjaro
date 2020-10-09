@@ -84,7 +84,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(archlinux git pip autojump command-not-found autoupdate zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(archlinux git pip autojump command-not-found autoupdate zsh-autosuggestions zsh-syntax-highlighting fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -142,7 +142,7 @@ source $ZSH/oh-my-zsh.sh
   alias myip='curl http://ipecho.net/plain; echo'
 
   # cat & less to bat
-  alias bat='bat --theme=ansi-$([ "$COLOR_SCHEME" = "light" ] && echo "light" || echo "dark")'
+  #alias bat='bat --theme=ansi-$([ "$COLOR_SCHEME" = "light" ] && echo "light" || echo "dark")'
   alias cat='bat --pager=never'
   alias less='bat'
 
@@ -174,6 +174,14 @@ setopt HIST_FIND_NO_DUPS
 # TEXMFDIST definition
 #export TEXMFDIST="/usr/share/texmf-dist"
 
+# fzf keybinds options
+    # preview file when pasting filename with ctrl-t
+    export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
+    # long command preview in preview window when using ctrl-r to paste command from history when pressing ? key
+    export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
+    # show dir trees when using alt-c to cd into dirs
+    export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
+
 # man page colors
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
@@ -182,7 +190,6 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
-export LESSHISTFILE=-
 
 # Proper colors for syntax-highlighting
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#ccc'
@@ -193,4 +200,3 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#ccc'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

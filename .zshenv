@@ -41,6 +41,7 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 # Path for npm
 PATH="$XDG_DATA_HOME/node_modules/bin:$PATH"
 export npm_config_prefix="$XDG_DATA_HOME"/node_modules
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
 # Path for emacs
 export PATH="$HOME/.emacs.d/bin:$PATH"

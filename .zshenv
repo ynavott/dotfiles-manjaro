@@ -43,6 +43,9 @@ PATH="$XDG_DATA_HOME/node_modules/bin:$PATH"
 export npm_config_prefix="$XDG_DATA_HOME"/node_modules
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
+# Path for java stuff
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+
 # Path for emacs
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
@@ -71,3 +74,4 @@ export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 
 # bat theme
 export BAT_THEME="Nord"
+

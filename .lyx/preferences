@@ -96,6 +96,7 @@ Format 24
 # FORMATS SECTION ##########################
 #
 
+\format "pdf2" "pdf" "PDF (pdflatex)" "F" "zathura" "" "document,vector,menu=export" ""
 
 #
 # CONVERTERS SECTION ##########################

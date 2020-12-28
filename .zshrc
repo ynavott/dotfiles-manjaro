@@ -84,7 +84,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(archlinux git pip autojump command-not-found autoupdate zsh-autosuggestions zsh-syntax-highlighting fzf)
+plugins=(archlinux git pip autojump command-not-found you-should-use autoupdate zsh-autosuggestions zsh-syntax-highlighting fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -173,6 +173,9 @@ setopt HIST_FIND_NO_DUPS
 
 # TEXMFDIST definition
 #export TEXMFDIST="/usr/share/texmf-dist"
+
+# you-should-use position
+export YSU_MESSAGE_POSITION="after"
 
 # fzf keybinds options
     # preview file when pasting filename with ctrl-t

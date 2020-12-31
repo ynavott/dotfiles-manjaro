@@ -64,6 +64,9 @@ export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 # WeeChat home path
 export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 
+# pylint path
+export PYLINTHOME="$XDG_CACHE_HOME"/pylint
+
 # fzf stuff
     # use fd instead of find for cleaner data
     export FZF_DEFAULT_COMMAND='fd -H --type f'

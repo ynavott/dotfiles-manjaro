@@ -142,5 +142,7 @@ ex ()
 #cargo path
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# XDG History file path
+export HISTFILE="$XDG_DATA_HOME"/bash/history
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -19,10 +19,40 @@ export BROWSER="firefox"
 export VIDEO="mpv"
 export IMAGE="sxiv"
 
-# pyenv stuff
-	# pyenv paths
-	export PYENV_ROOT="$HOME/.pyenv"
-	export PATH="$PYENV_ROOT/bin:$PATH"
+# zsh history file path
+export HISTFILE="$XDG_DATA_HOME"/zsh/zsh_history
+
+############### XDG PATH COMPLIANCE
+    # Cargo
+    export CARGO_HOME="$XDG_DATA_HOME"/cargo
+    export PATH="$XDG_DATA_HOME/cargo/bin:$PATH"
+    # rustup
+    export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+    # npm
+    PATH="$XDG_DATA_HOME/node_modules/bin:$PATH"
+    export npm_config_prefix="$XDG_DATA_HOME"/node_modules
+    export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+    # gnupg
+    export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+    # gtk2 config
+    export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+    # wget config
+    export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+    # WeeChat
+    export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
+    # pylint
+    export PYLINTHOME="$XDG_CACHE_HOME"/pylint
+    # GTK2
+    export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+    # Java
+    export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+    # pass
+    export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
+############### END
+
+# pyenv paths
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 
 # pipenv stuff
 	# create venv in proj directory
@@ -31,41 +61,9 @@ export IMAGE="sxiv"
 	# make pipenv use the pyenv python ver
 	export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
 
-# Cargo Stuff
-export CARGO_HOME="$XDG_DATA_HOME"/cargo
-export PATH="$XDG_DATA_HOME/cargo/bin:$PATH"
-
-# rustup Stuff
-export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
-
-# Path for npm
-PATH="$XDG_DATA_HOME/node_modules/bin:$PATH"
-export npm_config_prefix="$XDG_DATA_HOME"/node_modules
-export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
-
-# Path for java stuff
-export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 # Path for emacs
 export PATH="$HOME/.emacs.d/bin:$PATH"
-
-# gnupg path
-export GNUPGHOME="$XDG_DATA_HOME"/gnupg
-
-# gtk2 config path
-export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
-
-# Histfiles path
-export HISTFILE="$XDG_DATA_HOME"/zsh/zsh_history
-
-# wget config location
-export WGETRC="$XDG_CONFIG_HOME/wgetrc"
-
-# WeeChat home path
-export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
-
-# pylint path
-export PYLINTHOME="$XDG_CACHE_HOME"/pylint
 
 # fzf stuff
     # use fd instead of find for cleaner data

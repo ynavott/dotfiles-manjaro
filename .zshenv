@@ -36,6 +36,8 @@ export HISTFILE="$XDG_DATA_HOME"/zsh/zsh_history
     export GNUPGHOME="$XDG_DATA_HOME"/gnupg
     # gtk2 config
     export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+    # gtk1 config
+    export GTK_RC_FILES="$XDG_CONFIG_HOME"/gtk-1.0/gtkrc
     # wget config
     export WGETRC="$XDG_CONFIG_HOME/wgetrc"
     # WeeChat
